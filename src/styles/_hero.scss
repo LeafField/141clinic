@@ -19,16 +19,4 @@
   }
 
   // ヒーローセクションのテキスト
-  &__title {
-    @include subtitlefont;
-    writing-mode: vertical-rl;
-  }
-  &__text--right,
-  &__text--left {
-    display: block;
-    // width: rem(102);
-    padding-block: rem(37);
-    height: rem(565);
-    background-color: #fff;
-  }
 }
