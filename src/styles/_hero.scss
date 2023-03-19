@@ -1,0 +1,34 @@
+@use "utils" as *;
+
+// セクション
+.hero {
+  height: clamp(rem(450), vw(450, 767), rem(947));
+  width: 100%;
+  position: relative;
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 74% center;
+    vertical-align: bottom;
+  }
+
+  // ヒーローセクションのテキスト
+  &__title {
+    @include subtitlefont;
+    writing-mode: vertical-rl;
+  }
+  &__text--right,
+  &__text--left {
+    display: block;
+    // width: rem(102);
+    padding-block: rem(37);
+    height: rem(565);
+    background-color: #fff;
+  }
+}

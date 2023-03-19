@@ -1,0 +1,36 @@
+// 色情報
+$basecolor: #444444;
+$maincolor: #21a937;
+
+// ブレイクポイント
+$breakpoints: (
+  sp: "(max-width:767px)",
+  pc: "(min-width:768px)",
+);
+
+// メディアクエリのmixin
+@mixin mq($breakpoint) {
+  @media screen and #{map-get($breakpoints,$breakpoint)} {
+    @content;
+  }
+}
+
+// フォントサイズのmixin
+@mixin subtitlefont() {
+  font-size: clamp(rem(20), vw(24, 767), rem(24));
+}
+
+// rem計算の関数
+@function rem($pixel) {
+  @return calc($pixel / 16 * 1rem);
+}
+
+// vwの計算関数
+@function vw($fontsize, $basesize) {
+  @return calc($fontsize / $basesize * 100vw);
+}
+
+// ％計算の関数
+@function per($pixel, $basesize) {
+  @return calc($pixel / $basesize * 100%);
+}

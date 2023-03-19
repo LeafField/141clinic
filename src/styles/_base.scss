@@ -1,0 +1,7 @@
+@use "utils" as *;
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  color: $basecolor;
+  overflow-x: hidden;
+}
