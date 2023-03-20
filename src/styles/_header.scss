@@ -46,7 +46,7 @@
         font-size: rem(14);
         @include mq(pc) {
           text-align: right;
-          margin-right: 23px;
+          margin-right: rem(23);
         }
       }
       &--under {
@@ -55,7 +55,7 @@
         color: $maincolor;
         @include mq(pc) {
           margin-top: rem(5);
-          margin-right: rem(22);
+          margin-right: rem(20);
           text-align: right;
         }
         @include mq(sp) {
