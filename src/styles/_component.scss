@@ -1,0 +1,16 @@
+@use "utils" as *;
+
+// セクションタイトル
+.section-title {
+  font-size: clamp(rem(20), vw(20, 767), rem(24));
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #99e5a5;
+  text-decoration-thickness: rem(10);
+  text-decoration-skip-ink: none;
+  text-underline-offset: -3px;
+
+  @include mq(sp) {
+    font-size: clamp(rem(20), vw(20, 375), rem(24));
+  }
+}

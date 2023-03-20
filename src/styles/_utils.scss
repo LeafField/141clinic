@@ -17,7 +17,17 @@ $breakpoints: (
 
 // フォントサイズのmixin
 @mixin subtitlefont() {
-  font-size: clamp(rem(20), vw(24, 767), rem(24));
+  font-size: clamp(rem(20), vw(20, 768), rem(24));
+  @include mq(pc) {
+    font-size: clamp(rem(20), vw(20, 375), rem(24));
+  }
+}
+
+@mixin maintext() {
+  font-size: clamp(rem(12), vw(12, 768), rem(16));
+  @include mq(sp) {
+    font-size: clamp(rem(12), vw(12, 375), rem(16));
+  }
 }
 
 // rem計算の関数

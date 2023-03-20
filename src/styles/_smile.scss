@@ -1,0 +1,71 @@
+@use "utils" as *;
+
+// セクション
+.smile {
+  padding-inline: rem(15);
+  padding-bottom: rem(82);
+  @include mq(sp) {
+    padding-bottom: rem(60);
+  }
+
+  // セクションコンテナ
+  &__container {
+    max-width: rem(1180);
+    // height: rem(664);
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: rem(162);
+
+    @include mq(sp) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      row-gap: 20px;
+      margin-top: rem(100);
+    }
+  }
+
+  // コンテナ右の画像
+  &__right {
+    max-width: rem(690);
+    flex-shrink: 1;
+
+    & img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      vertical-align: bottom;
+    }
+  }
+
+  // コンテナ左の文字
+  &__left {
+    flex-shrink: 0;
+    @include mq(pc) {
+      margin-left: rem(31);
+      margin-right: rem(15);
+    }
+  }
+  // セクションタイトル
+  &__title {
+    margin-top: rem(31);
+    & span {
+      display: block;
+      &:nth-child(2) {
+        margin-top: clamp(rem(16), vw(16, 1000), rem(33));
+      }
+    }
+  }
+
+  // タイトル下のテキスト
+  &__text {
+    @include maintext;
+    line-height: 2.375;
+    margin-top: rem(30);
+    @include mq(sp) {
+      line-height: 1.75;
+      margin-top: 20px;
+    }
+  }
+}

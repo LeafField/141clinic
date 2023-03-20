@@ -1,0 +1,83 @@
+@use "utils" as *;
+
+// セクション
+.treatment {
+  background-color: #f5fcf8;
+  padding-inline: rem(15);
+  padding-bottom: rem(112);
+
+  // コンテナ
+  &__container {
+    max-width: rem(1180);
+    margin-inline: auto;
+  }
+
+  // セクションタイトル
+  &__title--one {
+    text-align: center;
+    padding-top: rem(78);
+  }
+
+  // タイトル下テキスト
+  &__text {
+    @include maintext;
+    margin-top: rem(70);
+    text-align: center;
+  }
+}
+
+// セクション内カード
+.card {
+  border: rem(1) solid #c9c9c9;
+  border-radius: rem(10);
+  // height: rem(591);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  // コンテナ
+  &__container {
+    display: grid;
+    gap: rem(20);
+    @include mq(pc) {
+      margin-top: rem(34);
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: minmax(rem(591), 1fr);
+    }
+    @include mq(sp) {
+      margin-top: rem(25);
+    }
+  }
+
+  // カードタイトル
+  &__title {
+    @include subtitlefont;
+    text-align: center;
+    padding-top: rem(38);
+  }
+
+  // カードテキスト
+  &__text {
+    // margin-inline: auto;
+    margin-top: rem(38);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: calc(38 / 16);
+  }
+
+  // カードイメージ
+  &__img {
+    display: block;
+    width: rem(187);
+    height: rem(187);
+    margin: auto auto 0 auto;
+
+    & img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}

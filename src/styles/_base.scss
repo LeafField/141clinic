@@ -4,4 +4,10 @@ body {
   font-family: "Noto Sans JP", sans-serif;
   color: $basecolor;
   overflow-x: hidden;
+  @include maintext;
+}
+
+a {
+  text-decoration: none;
+  color: $basecolor;
 }
