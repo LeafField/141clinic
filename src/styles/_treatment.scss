@@ -30,11 +30,12 @@
 .card {
   border: rem(1) solid #c9c9c9;
   border-radius: rem(10);
-  // height: rem(591);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  background-color: #fff;
+  padding-inline: 15px;
 
   // コンテナ
   &__container {
@@ -59,12 +60,12 @@
 
   // カードテキスト
   &__text {
-    // margin-inline: auto;
     margin-top: rem(38);
     display: flex;
     justify-content: center;
     align-items: center;
     line-height: calc(38 / 16);
+    font-weight: bold;
   }
 
   // カードイメージ
