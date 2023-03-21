@@ -15,6 +15,12 @@
   height: rem(799);
   width: 100%;
   padding-inline: rem(15);
+  position: relative;
+
+  @include mq(sp) {
+    padding-bottom: 60px;
+    height: auto;
+  }
 
   &__container {
     max-width: rem(1180);
@@ -103,9 +109,9 @@
       }
       & .right__week {
         text-decoration: underline;
-        text-decoration-color: $maincolor;
+        text-decoration-color: #99e5a5;
         text-decoration-thickness: rem(4);
-        text-underline-offset: -2px;
+        text-underline-offset: -1.5px;
       }
 
       & .right__time {
@@ -142,5 +148,10 @@ small {
   @include mq(pc) {
     text-align: right;
     margin-top: rem(20);
+  }
+
+  @include mq(sp) {
+    position: absolute;
+    bottom: rem(10);
   }
 }
