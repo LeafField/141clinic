@@ -27,16 +27,19 @@
     max-width: rem(1048);
     margin-inline: auto;
     border-bottom: rem(2) solid #e7e7e7;
+    display: flex;
+
     &:first-child {
       margin-top: rem(1);
     }
     @include mq(pc) {
       height: rem(63);
-      display: flex;
       align-items: center;
     }
     @include mq(sp) {
       padding-block: rem(10);
+      flex-direction: column;
+      row-gap: rem(5);
     }
   }
 
@@ -75,6 +78,7 @@
 
   &__under {
     font-weight: bold;
+    display: block;
 
     @include mq(pc) {
       margin-left: rem(34);

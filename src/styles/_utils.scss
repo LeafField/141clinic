@@ -5,6 +5,7 @@ $maincolor: #21a937;
 // ブレイクポイント
 $breakpoints: (
   sp: "(max-width:767px)",
+  tb: "(min-width:1000px)",
   pc: "(min-width:768px)",
 );
 

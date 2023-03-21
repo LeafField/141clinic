@@ -50,9 +50,6 @@
         }
       }
       &--under {
-        font-size: rem(24);
-        font-weight: bold;
-        color: $maincolor;
         @include mq(pc) {
           margin-top: rem(5);
           margin-right: rem(20);
@@ -62,13 +59,19 @@
           text-align: center;
         }
 
+        & a {
+          font-size: rem(24);
+          font-weight: bold;
+          color: $maincolor;
+        }
+
         & img {
           display: inline-block;
           width: 24.36px;
           height: 24.57px;
           position: relative;
           top: rem(3);
-          left: rem(2);
+          left: 0;
         }
       }
     }

@@ -1,0 +1,146 @@
+@use "utils" as *;
+
+// googlemap
+.footer__map {
+  aspect-ratio: 608 / 440;
+  margin-top: rem(30);
+  @include mq(pc) {
+    width: per(608, 1180);
+    margin-top: 196px;
+  }
+}
+
+// フッター
+.footer {
+  height: rem(799);
+  width: 100%;
+  padding-inline: rem(15);
+
+  &__container {
+    max-width: rem(1180);
+    margin-inline: auto;
+
+    @include mq(pc) {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+    }
+  }
+
+  // フッター右のテキストエリア
+  &__inner {
+    @include mq(pc) {
+      margin-top: rem(190);
+      margin-left: rem(33);
+      flex-grow: 1;
+    }
+    margin-top: rem(90);
+  }
+
+  // フッタータイトル
+  &__title {
+    width: rem(263);
+    & img {
+      width: 100%;
+      height: auto;
+      vertical-align: bottom;
+      object-fit: cover;
+    }
+  }
+  // 住所欄
+  &__address {
+    margin-top: rem(24);
+    font-size: rem(16);
+
+    & .address__right {
+      margin-left: rem(13);
+    }
+  }
+
+  // 電話番号欄
+  &__telephone {
+    display: block;
+    font-size: rem(24);
+    font-weight: bold;
+    color: $maincolor;
+    margin-top: rem(24);
+
+    & img {
+      width: 24.36px;
+      height: 24.57px;
+      vertical-align: bottom;
+      margin-left: rem(5);
+      margin-bottom: rem(2);
+    }
+  }
+
+  // 診療日欄
+  &__day {
+    max-width: 100%;
+    border-top: rem(2) solid #e7e7e7;
+    border-bottom: rem(2) solid #e7e7e7;
+    margin-top: 28px;
+    margin-left: 6px;
+    & .day__top {
+      display: flex;
+      padding-top: 21px;
+      font-size: rem(14);
+    }
+
+    & .day__left {
+      padding-right: 28.5px;
+      border-right: rem(2) solid #e7e7e7;
+      flex-shrink: 0;
+    }
+
+    & .day__right {
+      margin-left: rem(26);
+
+      & .right__inner {
+        & + .right__inner {
+          margin-top: rem(11);
+        }
+      }
+      & .right__week {
+        text-decoration: underline;
+        text-decoration-color: $maincolor;
+        text-decoration-thickness: rem(4);
+        text-underline-offset: -2px;
+      }
+
+      & .right__time {
+        margin-left: 20px;
+        display: inline-block;
+
+        & span:nth-child(2) {
+          margin-left: 17px;
+          white-space: nowrap;
+        }
+      }
+    }
+
+    // 休診日
+    & .day__under {
+      display: flex;
+      font-size: rem(14);
+      margin-top: rem(29);
+      padding-bottom: rem(14);
+
+      & .day__left {
+        padding-right: rem(42);
+        height: rem(29);
+      }
+    }
+  }
+}
+
+// 著作権情報
+small {
+  display: block;
+  font-size: rem(11);
+
+  @include mq(pc) {
+    text-align: right;
+    margin-top: rem(20);
+  }
+}
