@@ -2,6 +2,7 @@
 
 body {
   font-family: "Noto Sans JP", sans-serif;
+  font-display: swap;
   color: $basecolor;
   overflow-x: hidden;
   @include maintext;

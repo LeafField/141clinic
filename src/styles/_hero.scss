@@ -32,15 +32,14 @@
 
   &__text--right,
   &__text--left {
-    writing-mode: vertical-rl;
     width: rem(102);
     height: rem(565);
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: center;
     background-color: #fff;
     font-size: rem(28);
     font-weight: bold;
-    letter-spacing: -0.22em;
 
     @media screen and (max-width: 1200px) {
       width: rem(80);
@@ -75,7 +74,9 @@
   }
 
   & .text__inner {
-    margin-top: rem(18);
+    margin-top: rem(26);
+    writing-mode: vertical-rl;
+    letter-spacing: 0.21em;
   }
 
   & .main-color {
